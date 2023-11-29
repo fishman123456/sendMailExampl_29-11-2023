@@ -7,11 +7,12 @@ namespace sendMailExampl_29_11_2023
     {
         static void Main(string[] args)
         {
+            // создание клиента
             SmtpClient smtpClient = new SmtpClient("smtp.mail.ru");
             smtpClient.Port = 587;
             smtpClient.EnableSsl = true;
             smtpClient.Credentials = new NetworkCredential ("A_Fiscman@list.ru", "ittEHuHPF0TDK19ZqAT2");
-            // отправка сообщения
+            // отправка сообщения  откуда           куда               заголовок    тело
             smtpClient.Send ("A_Fiscman@list.ru", "den9152@yandex.ru", "twrthrt", "Здрасти");
             Console.WriteLine("сообщение отправлено");
         }
